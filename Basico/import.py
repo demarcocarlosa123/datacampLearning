@@ -13,4 +13,3 @@ radianes = math.radians(90)
 
 print(radianes)
 
-import scipy

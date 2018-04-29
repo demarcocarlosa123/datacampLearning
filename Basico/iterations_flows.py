@@ -71,10 +71,10 @@ for pk, fila in cars.iterrows():
     print(pk + ": " + str(fila['cars_per_cap']) )
 
 #Un for sobre un DataFame y agregado de una columna.
+#loc[] agrega un campo nuevo en el objeto Series, cuando matchea el indice.
 for pk, fila in cars.iterrows():
     pais_minuscula = fila["country"]
     cars.loc[pk, "COUNTRY"] = pais_minuscula.upper()
-print cars
 
 #Una forma eficiente de agregar campos calculados al DataFrame
 def porMil(x):
