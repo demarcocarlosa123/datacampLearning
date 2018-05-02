@@ -3,14 +3,17 @@
 
 
 sec = (num for num in range(30))
-print(next(sec))
-print(next(sec))
-print(next(sec))
-for value in sec:
-    print(value)
+valor = next(sec)
+print(valor)
+valor = next(sec)
+print(valor)
+valor = next(sec)
+print(valor)
+for valor in sec:
+    print(valor)
 
 
-pares = (num for num in range(10**2) if num%2 ==0)
+pares = (num for num in range(10**2) if num % 2 == 0)
 print(pares)
 print(list(pares))
 
