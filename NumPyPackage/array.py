@@ -27,6 +27,13 @@ print(bb_gordos)
 print(bb_weight[bb_gordos])
 print(bb_gordos.__len__())
 
+##Filtro en una sola linea con numpy
+bb_gordos = bb_weight[bb_weight > 100]
+print(list(bb_gordos))
+
+##Filtro con lambda
+bb_gordos_lambda = filter(lambda persona: persona>100, baseball_weight)
+print(list(bb_gordos_lambda))
 
 a1 = np.array([True, 1, 2])
 print(a1)
