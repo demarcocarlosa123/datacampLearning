@@ -16,3 +16,12 @@ print("Esta Germany in Europe?: ",'germany' in europa)
 ## Agregando un elemneto a un diccionario:
 europa['argentina'] = 'buenos aires'
 print("Diccionario con elemento agregado: ",europa)
+
+
+telefonos = {
+    'jesica': 1557470805,
+    'carlos': 1533798241,
+    'ernesto': 47558241
+}
+
+print(telefonos)
