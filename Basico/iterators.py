@@ -6,9 +6,11 @@ print(next(it))
 print(next(it))
 
 
-#la funcion enumarate() arma tuplas a partir de un iterable con el primer elto siendo el indice
+#la funcion enumarate() arma un objeto del tipo (Enumerate) a partir de un iterable con el primer elto siendo el indice
 flashEnumerado = enumerate(flash)
 print(flashEnumerado)
+
+#La funcion list recibe como parametro un objeti enumerate y lo transforma en una lista.
 listaFlashEnumerado = list(enumerate(flash))
 print("listaEnumerada:")
 print(listaFlashEnumerado)
@@ -17,7 +19,7 @@ print("For sentence:")
 for index, value in enumerate(flash):
     print(index, value)
 
-#La funcion zip() una en un objeto zip tuplas con los elementos de cada iterable pasado por cada indice.
+#La funcion zip() une los elementos de diferentes listas con mismo indice en un gran objeto Zip.
 mutante = ['charles xavier', 'bobby drake', 'kurt wagner', 'max eisenhardt', 'kitty pride']
 alias = ["porfesor X", "iceman", "nightcrawler", "magneto", "shadowcat"]
 poder = ["telekinesis", "thermokinesis", "teletrasportacion", "magnetismo", "intangiability"]
