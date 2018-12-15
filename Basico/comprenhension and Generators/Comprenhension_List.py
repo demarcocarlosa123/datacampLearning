@@ -1,3 +1,5 @@
+###List comprenhension es una forma concisa de crear LISTAS.
+
 flash = ['jay garrick', 'barry allen', 'wally west', 'bart allen']
 mutants = ['charles xavier', 'bobby drake', 'kurt wagner', 'max eisenhardt', 'kitty pride']
 

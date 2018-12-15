@@ -15,8 +15,8 @@ print(G.edges())
 
 #Definiendo el color de los nodos
 color_map={
-    'B':0.6,
-    'E':0.4
+    'B':0.8,
+    'E':0.9
 }
 color_default = 1
 listColNodes = [color_map.get(node, color_default) for node in G.nodes()]
