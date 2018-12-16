@@ -11,9 +11,6 @@ d = list2Dict(nombres, anios)
 print(d)
 
 
-
-
-import numpy as np
 headers = ['NombrePais', 'Codigo', 'Desidad', 'Superficie', 'Capital', 'poblacion']
 paises = [['Argentina', 'AR', 16, 2792573, 'Buenos Aires'],
          ['Brasil', 'BR', 24, 8514877, 'Brasilia'],
