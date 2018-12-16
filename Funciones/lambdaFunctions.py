@@ -5,6 +5,7 @@ print(gritar("Hola ", 5))
 
 #map() sirven para aplicar una funcion lambda sobre un array
 #map() recibe dos parametros, una funcion y una lista. La funcion puede ser tanto un lambda como una funcion comun
+#funciona de manera similar a la función apply() que se puede aplicar a un objetivo Series de pandas.
 spells = ["protego", "accio", "expecto patronum", "legilimens"]
 spellsRepetidos = map(lambda s: (s + " ") * 3, spells)
 print(type(spellsRepetidos))
