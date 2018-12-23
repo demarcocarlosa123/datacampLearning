@@ -33,10 +33,12 @@ print(miembrosLargos)
 print(list(miembrosLargos))
 
 isCorto = (lambda elemento: len(elemento)<=6)
-miembrosCortos = filter(lambda elemento: len(elemento)<=6, fellowship)
+miembrosCortos = filter(isCorto, fellowship)
 print(list(miembrosCortos))
 
 #La otra utilidad que tiene lambda es aplicarlos sobre reduce.
+#Reduce itera sobre una lista, y se va moviendo de a una posición a la vez, pero le aplica una función al elemento actual y al siguiente.
+#El resultado de la función lo uniliza como base para compararlo en la proxima iteracion
 # Import reduce from functools
 from functools import reduce
 
@@ -48,3 +50,7 @@ result = reduce(lambda item1, item2: item1 + item2, stark)
 
 # Print the result
 print(result)
+
+masLargo = (lambda nom1, nom2: nom1 if len(nom1)>len(nom2) else nom2)
+nombre = reduce(masLargo, stark)
+print("El nombre mas largo es: ", nombre)

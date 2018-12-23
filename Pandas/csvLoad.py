@@ -8,7 +8,7 @@ per_cap = cars['drives_right']
 print(per_cap)
 
 ###De ahora en mas se seleccionan filas y columnas
-##Selecciona columnas
+##Selecciona columnas. En este caso al ser mar de una columna devueve un SubDataFame.
 x1 = cars[['cars_per_cap', 'drives_right']]
 print(x1)
 
@@ -31,7 +31,7 @@ print('Select de algunas filas y algunas columnas')
 subSelect = cars.loc[['AU', 'IC'],['country', 'drives_right']]
 print(subSelect)
 
-print('Select all the rows of for country and dives_right')
+print('Select all the rows just for country and dives_right')
 subSelect = cars.loc[:, ['country', 'drives_right']]
 
 
