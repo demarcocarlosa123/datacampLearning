@@ -49,3 +49,6 @@ print(dataMixta['Fare'])
 
 #Fila numero 10
 print(dataMixta[9])
+
+
+

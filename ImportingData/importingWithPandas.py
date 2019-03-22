@@ -44,7 +44,7 @@ data = pd.read_csv(file, sep='\t', comment='#', na_values=['Nothing', 'NA'])
 print(data.head())
 
 # Plot 'Age' variable in a histogram
-pd.DataFrame.hist(data[['Age']])
+pd.DataFrame.hist(data[['Age']], bins=15)
 plt.xlabel('Age (years)')
 plt.ylabel('count')
 plt.show()
