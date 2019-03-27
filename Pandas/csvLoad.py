@@ -3,6 +3,7 @@ import pandas as pd
 cars = pd.read_csv('cars.csv', index_col=0)
 print(cars)
 
+
 ###Selección de una única dimension. Devuelve un tipo Series.
 per_cap = cars['drives_right']
 print(per_cap)
