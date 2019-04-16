@@ -1,4 +1,4 @@
-import numpy as np
+    import numpy as np
 
 peso_kg = np.array([90, 89, 120, 95, 105, 98, 103, 114, 100, 94])
 altura_m = np.array([1.90, 1.95, 2.10, 1.92, 2.01, 1.98, 2.02, 2.16, 1.98, 1.96])
