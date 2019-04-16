@@ -23,7 +23,7 @@ bb_weight = np.array(baseball_weight)
 ##Aplicando una operacion logica
 bb_gordos = bb_weight > 100
 print(bb_gordos)
-##Aplica un filtro
+##Aplica un filtro. Solo se queda con los elementos "True", los otros no los incluye en el resultado.
 print(bb_weight[bb_gordos])
 print(bb_gordos.__len__())
 

@@ -40,3 +40,12 @@ def report_status(**kwargs):
 
 # First call to report_status()
 report_status(name="luke", affiliation="jedi", status="missing")
+
+
+
+def soloCelulares(**diccionario):
+    for key, value in diccionario.items():
+        if value[0:2] == '11':
+            print(key + " " + value)
+
+soloCelulares(jesica='1157470808', ernesto='47558241', carlos='1133798241')

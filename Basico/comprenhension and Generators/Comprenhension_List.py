@@ -1,3 +1,6 @@
+###List comprenhension es una forma secilla de crear LISTAS, a partir de otra.
+#Evita hacer un for semi complejo sobre una lista, para aplicarle a cada elemento una transformacion.
+
 flash = ['jay garrick', 'barry allen', 'wally west', 'bart allen']
 mutants = ['charles xavier', 'bobby drake', 'kurt wagner', 'max eisenhardt', 'kitty pride']
 
@@ -6,6 +9,7 @@ for x in mutants:
     flashTooneada.append(x + "!")
 print(flashTooneada)
 
+#Aqui creamos una lista a partir de otra.
 flashTooneada = [x + "!" for x in mutants]
 print(flashTooneada)
 

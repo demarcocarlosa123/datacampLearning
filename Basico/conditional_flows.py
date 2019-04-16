@@ -11,6 +11,7 @@ else :
     print('Es chiquito')
     print('Casi infimo')
 print('-----------------')
+
 area = 8
 if area > 30 :
     print('Enorme')
@@ -23,8 +24,9 @@ else :
         else:
             print('chico')
 print('-----------------')
+
 area = 25
 if area > 30: print('Enorme')
 elif area > 20: print('Grande')
 elif area > 10: print('Intermedio')
-else:print('chico')
+else: print('chico')

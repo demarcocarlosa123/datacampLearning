@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../Despegar/.idea/Despegar.iml" filepath="$PROJECT_DIR$/../Despegar/.idea/Despegar.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/datacampLearning.iml" filepath="$PROJECT_DIR$/.idea/datacampLearning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/datacamp.iml" filepath="$PROJECT_DIR$/.idea/datacamp.iml" />
     </modules>
   </component>
 </project>
