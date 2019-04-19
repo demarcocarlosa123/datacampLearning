@@ -26,3 +26,4 @@ bad['total_bill'] = pd.to_numeric(bad['total_bill'], errors='coerce')
 bad.tip = pd.to_numeric(bad.tip, errors='coerce')
 print(bad.info())
 print(bad.head(10))
+
