@@ -30,10 +30,14 @@ sub_df = df[['Job #', 'Doc #', 'Borough', 'Initial Cost', 'Total Est. Fee', 'Exi
 print('-----------------------1')
 
 
-# Uso el metodo info() para ver informacion general del Df.
-# Muestra la cantidad de fila y columnas
-# Muestra cantidad de non_missing data para cada columna
-# Muestra el tipo de dato de cada columna. Si es object es porque no encontró un número
+# Uso el metodo info() para ver informacion general del Df. Muestra
+# - la cantidad de filas totales
+# - La cantidad de columnas totales
+# - Lista los nombres de las columnas con:
+#   * la cantidad elementos non-null que encontró
+#   * el tipo de dato. (Python interpreta los strings como del tipo "objetct")
+# - La cantidad de tipos de datos diferentes de las columnas.
+# - la cantidad de memoria necesaria para levantar el DataFrame
 i = df.info()
 print(type(i))
 print(i)
@@ -44,7 +48,7 @@ print('-----------------------2')
 
 
 ### Para hacer un rápido analisis estadistico sobre los atributos numericos
-### Se una la función describe() sobre un objeto DataFrame
+### Se usa la función describe() sobre un objeto DataFrame
 subDFNumerico = df[['Proposed No. of Stories','Existing Height', 'Street Frontage', 'Proposed Height']]
 i = subDFNumerico.describe()
 print(type(i))
