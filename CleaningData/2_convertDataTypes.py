@@ -14,8 +14,8 @@ print(tips.info())
 
 
 print('---------------------1')
-### Cuando vemos que hay campos que deben figurar como numericos (int o float,
-### pero aparecen como object (string en python), esto indica que hay data corrupta.
+### Cuando vemos que hay campos que deben figurar como numericos (int o float),
+### pero aparecen como object (string en python), sifnifica que hay data corrupta.
 ### entonces o exploramos la data a ver que onda, o forzamos a que sea numerico.
 
 bad = pd.read_csv('files/tipsBad.csv', sep=';')
