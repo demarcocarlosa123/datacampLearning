@@ -79,7 +79,7 @@ gapC = gapC.dropna()
 temp = pd.merge(left=gapA, right=gapB, left_on='Life expectancy', right_on='Life expectancy')
 gap = pd.merge(left=temp, right=gapC, left_on='Life expectancy', right_on='Life expectancy')
 
-print(gap['Life expectancy'].value_counts())
+#print(gap['Life expectancy'].value_counts())
 
 
 
@@ -87,3 +87,23 @@ print(gap['Life expectancy'].value_counts())
 # Check that there is only one instance of each country
 #index 0 of .value_counts() will contain the most frequently occuring value.
 assert gap['Life expectancy'].value_counts()[0] == 1
+
+print('----------------------------1')
+### Ahora que tenemos la data sin valores NULOS, debemos ordenarla.
+### Las columnas deben ser variables, y los filias observaciones.
+### Hasta aca la info no esta asi. En cada columna tenemos un año diferente.
+gap_melted = gap.melt(id_vars=['Life expectancy']) #id_vars indica cuales columnas no se funden.
+gap_melted.columns = ['country', 'year', 'life_expectancy']
+print(gap_melted.head())
+
+print('----------------------------2')
+### Ahora que tenemos la info con un formato ordenado, debemos ver que cada columna tenga type correcto.
+### Si no lo tiene hay que convertirlo. Veremos que 'year' es object y no int64
+import numpy as np
+
+print(gap_melted.info())
+gap_melted.year = pd.to_numeric(gap_melted.year)
+
+assert gap_melted.country.dtypes == np.object
+assert gap_melted.year.dtypes == np.int64
+assert gap_melted.life_expectancy.dtypes == np.float64
