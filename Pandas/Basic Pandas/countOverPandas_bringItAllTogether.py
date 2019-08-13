@@ -1,6 +1,6 @@
 import pandas as pd
 
-tweet_df = pd.read_csv('tweets.csv')
+tweet_df = pd.read_csv('files/tweets.csv')
 countVecesIdioma = {}
 
 for idioma in tweet_df["lang"]:

@@ -13,5 +13,5 @@ def count_group_by(file, size, columBy):
             else:
                 countVeces[entry] = 1
     return countVeces
-output1 = count_group_by("tweets.csv", 10, "lang")
+output1 = count_group_by("files/tweets.csv", 10, "lang")
 print(output1)

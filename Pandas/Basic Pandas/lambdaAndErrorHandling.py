@@ -1,6 +1,6 @@
 import pandas as pd
 
-tweet_df = pd.read_csv('tweets.csv')
+tweet_df = pd.read_csv('files/tweets.csv')
 
 #Quiero imprimir solo los reteets
 resultado = filter(lambda tweet: tweet[0:2]=="RT",tweet_df["text"])

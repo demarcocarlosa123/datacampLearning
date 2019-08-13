@@ -1,6 +1,6 @@
 import pandas as pd
 
-cars = pd.read_csv('cars.csv', index_col=0)
+cars = pd.read_csv('files/cars.csv', index_col=0)
 print(cars)
 
 
