@@ -28,7 +28,7 @@ plt.xlim(20, 55)
 plt.ylim(20, 55)
 
 # Display the plot
-#plt.show()
+plt.show()
 
 
 ### Antes de seguir es importante verificar las siguientes cosas sobre la data:
@@ -101,9 +101,56 @@ print('----------------------------2')
 ### Si no lo tiene hay que convertirlo. Veremos que 'year' es object y no int64
 import numpy as np
 
-print(gap_melted.info())
+print(gap_melted.info)
 gap_melted.year = pd.to_numeric(gap_melted.year)
 
 assert gap_melted.country.dtypes == np.object
 assert gap_melted.year.dtypes == np.int64
 assert gap_melted.life_expectancy.dtypes == np.float64
+
+
+### Ahora que la info esta bien ordenada, hay que verificar que los paises esten bien escritos
+### Fuerzo a que un pais puede estar escrito con letras, puntos, espacios pero nada mas.
+### En principio quiero listar los que estan mal.
+
+countries = gap_melted['country']
+countries = countries.drop_duplicates()
+
+pattern = '^[A-Za-z\.\s]*$'
+isAMatchSeries = countries.str.contains(pattern)
+isNotAMatchSeries = ~isAMatchSeries
+
+invalidCountries = countries[isNotAMatchSeries]
+print('Paises invalidos:')
+print(invalidCountries)
+#Como podemos ver habria que ajustar la R.Expesion porque los paises invalidos no lo son tanto.
+
+###Me aseguro que los campos del DF no contengan valores vacios.
+assert pd.notna(gap_melted.country).all()
+assert pd.notna(gap_melted.year).all()
+assert pd.notna(gap_melted.life_expectancy).all()
+
+
+
+### Ahora que esta toda la data ordenada, entonces vamos a graficarla.
+#1ro queremos ver un histograma de life_expectance, para comparar entre bines.
+import matplotlib.pyplot as plt
+plt.subplot(2,1,1)
+
+#1ro queremos ver los life_expectancy que mas suceden
+#Entonces ploteamos un histograma de life_expectance, para comparar entre bines.
+gap_melted.life_expectancy.plot(kind='hist', bins=10)
+
+#2do queremos ver los lifre_expectances pero por año
+gap_grouped = gap_melted.groupby('year')['life_expectancy'].mean()
+print(gap_grouped.head())
+
+plt.subplot(2,1,2)
+gap_grouped.plot()
+plt.title ('Life expectancy over years')
+plt.ylabel('Life expectancy')
+plt.xlabel('Year')
+plt.show()
+
+gap_melted.to_csv('files/gapmelted.csv')
+gap_grouped.to_csv('files/gapgroup.csv')

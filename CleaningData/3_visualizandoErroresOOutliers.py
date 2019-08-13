@@ -58,3 +58,5 @@ plt.show()
 # Y ahora que elimine los supuestos outliers también puedo volver a graficar el box plot
 df_subset.boxplot(column='initialCost', by='Borough', rot=45)
 plt.show()
+
+

@@ -30,6 +30,29 @@ texto = 'AUstralia'
 pattern3 = bool(re.match(pattern='[A-Z]\w*', string='Australia'))
 print(texto, pattern3)
 
+### Un 4to patrol que me afano del Put it all together de Cleaning Data
+texto = 'Australia'
+patron = '^[A-Za-z\.\s]*$'
+isAMatch = bool(re.match(pattern=patron, string=texto))
+print(texto, isAMatch)
+
+texto = 'St. Domingo'
+isAMatch = bool(re.match(pattern=patron, string=texto))
+print(texto, isAMatch)
+
+texto = ' .E. E.. U. U'
+isAMatch = bool(re.match(pattern=patron, string=texto))
+print(texto, isAMatch)
+
+texto = 'Hong Kong, China'
+isAMatch = bool(re.match(pattern=patron, string=texto))
+print(texto, isAMatch)
+
+
+texto = 'Malvinas (Islas)'
+isAMatch = bool(re.match(pattern=patron, string=texto))
+print(texto, isAMatch)
+
 print('----------------------1')
 ### Como extraer números de un parrafo.
 ### se usa usa la función findall()
